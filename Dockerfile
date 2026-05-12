@@ -1,5 +1,5 @@
 # Stage 1: build the Hugo site
-FROM ghcr.io/gohugoio/hugo:0.161.1 AS builder
+FROM ghcr.io/gohugoio/hugo:v0.161.1 AS builder
 WORKDIR /site
 COPY . .
 RUN hugo --minify --gc
