@@ -1,0 +1,29 @@
+{{ define "main" }}
+<pre class="home-ascii" aria-label="Ethonium">
+█████  █████  █   █   ███   █   █  █████  █   █  █     █
+█        █    █   █  █   █  ██  █    █    █   █  ██   ██
+████     █    █████  █   █  █ █ █    █    █   █  █ █ █ █
+█        █    █   █  █   █  █  ██    █    █   █  █  █  █
+█████    █    █   █   ███   █   █  █████   ███   █     █
+</pre>
+
+{{ with .Site.Params.quote }}
+<p class="home-quote">{{ . }}</p>
+{{ end }}
+
+<div class="tag-filter-row">
+  {{ range .Site.Taxonomies.tags.Alphabetical }}
+    {{ if eq (len .WeightedPages) 1 }}
+      <a href="{{ (index .WeightedPages 0).Page.Permalink }}" class="tag-filter">{{ .Name }}</a>
+    {{ else }}
+      <a href="{{ printf "/tags/%s/" (.Name | urlize) | absURL }}" class="tag-filter">{{ .Name }}</a>
+    {{ end }}
+  {{ end }}
+</div>
+
+<ul class="post-list">
+  {{ range (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
+  {{ partial "post-entry.html" . }}
+  {{ end }}
+</ul>
+{{ end }}

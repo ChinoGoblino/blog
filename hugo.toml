@@ -1,0 +1,38 @@
+# Site title — update before deploying
+title = "Ethonium"
+
+# Base URL — set to your domain before deploying
+baseURL = "https://ethonium.com/"
+
+languageCode = "en-us"
+
+# Tags only — categories disabled
+[taxonomies]
+  tag = "tags"
+
+[params]
+  # Author name used in RSS feed and footer copyright
+  author = "Otus"
+  description = "A blog I write when I feel like it"
+  # Italic quote shown on the homepage below the ASCII art — leave empty to hide
+  quote = """
+I am fond of pigs. Dogs look up at us. Cats look down on us. Pigs treat us as equals. 
+- Winston Churchill
+"""
+
+[markup]
+  [markup.highlight]
+    style = "github-dark"
+    codeFences = true
+    lineNos = false
+    noClasses = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]

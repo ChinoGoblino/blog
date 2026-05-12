@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ethonium</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Ethonium</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 May 2026 22:56:17 +1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>An Introduction to Organic Chemistry</title>
+      <link>http://localhost:1313/posts/intro-to-organics/</link>
+      <pubDate>Tue, 12 May 2026 22:56:17 +1000</pubDate>
+      <guid>http://localhost:1313/posts/intro-to-organics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;This is a placeholder. Write something about yourself here.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;I write about things that interest me. This blog is a place to think out loud and keep notes I might want to find later.&lt;/p&gt;&#xA;&lt;p&gt;Feel free to &lt;a href=&#34;#&#34;&gt;get in touch&lt;/a&gt; — replace this with your actual contact link.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

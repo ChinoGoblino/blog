@@ -1,0 +1,15 @@
+{{ $firstImg := "" }}
+{{ $imgTags := findRE `<img[^>]+>` .Content 1 }}
+{{ with $imgTags }}
+  {{ $firstImg = replaceRE `^.*?\bsrc="([^"]+)".*$` "$1" (index . 0) }}
+{{ end }}
+<li class="post-entry">
+  <div class="post-entry-main">
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    <span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
+  </div>
+  <div class="post-entry-body">
+    {{ if $firstImg }}<img src="{{ $firstImg }}" alt="" class="post-entry-img" loading="lazy">{{ end }}
+    <p class="post-entry-summary">{{ truncate 140 "…" (.Summary | plainify) }}</p>
+  </div>
+</li>

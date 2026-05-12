@@ -1,0 +1,476 @@
+/* --------------------------------------------------------
+   Variables
+   -------------------------------------------------------- */
+:root {
+  --bg:          #111111;
+  --bg-raised:   #191919;
+  --text:        #e2e2e2;
+  --text-muted:  #e2e2e2;
+  --link:        #9ba9c4;
+  --link-hover:  #c0cce0;
+  --border:      #282828;
+  --max-width:   680px;
+  --font-body:   "Commit Mono", monospace;
+  --font-mono:   "Commit Mono", monospace;
+}
+
+/* --------------------------------------------------------
+   Reset
+   -------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --------------------------------------------------------
+   Base
+   -------------------------------------------------------- */
+html {
+  font-size: 18px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.75;
+  padding: 0 1.5rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  text-decoration-color: currentColor;
+}
+
+a:hover {
+  color: var(--bg) !important;
+  background-color: var(--text) !important;
+  text-decoration-color: transparent !important;
+}
+
+/* --------------------------------------------------------
+   Layout — constrain header, main, footer to max-width
+   -------------------------------------------------------- */
+header,
+main,
+footer {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --------------------------------------------------------
+   Header / nav
+   -------------------------------------------------------- */
+header {
+  padding: 2.75rem 0 2.25rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.site-title {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 1.75rem;
+}
+
+.nav-links a {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+
+/* --------------------------------------------------------
+   Main
+   -------------------------------------------------------- */
+main {
+  padding-bottom: 5rem;
+}
+
+/* --------------------------------------------------------
+   Footer
+   -------------------------------------------------------- */
+footer {
+  padding: 1.5rem 0 3rem;
+  color: var(--text-muted);
+  font-size: 0.825rem;
+  border-top: 1px solid var(--border);
+}
+
+footer a {
+  color: var(--text-muted);
+}
+
+
+/* --------------------------------------------------------
+   Post list (homepage, tag pages, search results)
+   -------------------------------------------------------- */
+.post-list {
+  list-style: none;
+}
+
+.post-entry {
+  padding: 0.6rem 0;
+}
+
+.post-entry-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.5rem;
+}
+
+.post-entry-main a {
+  color: var(--text);
+}
+
+.post-date {
+  color: var(--text-muted);
+  font-size: 0.825rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.post-entry-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-top: 0.35rem;
+}
+
+.post-entry-img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.post-entry-summary {
+  color: var(--text-muted);
+  font-size: 0.825rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* --------------------------------------------------------
+   Page header (tags index, about, search)
+   -------------------------------------------------------- */
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--text);
+}
+
+/* --------------------------------------------------------
+   Post page
+   -------------------------------------------------------- */
+.post-header {
+  margin-bottom: 2.5rem;
+}
+
+.post-header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.35;
+  margin-bottom: 0.6rem;
+  color: var(--text);
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  color: var(--text-muted);
+  font-size: 0.825rem;
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.75rem;
+}
+
+.tag {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+
+/* --------------------------------------------------------
+   Table of contents
+   -------------------------------------------------------- */
+.toc {
+  padding-left: 1rem;
+  border-left: 1px solid var(--border);
+  margin: 2.25rem 0 2.5rem;
+  font-size: 0.875rem;
+}
+
+.toc-label {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 0.6rem;
+}
+
+/* Hugo's generated TOC is a <nav> containing <ul> */
+.toc nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.toc nav ul ul {
+  padding-left: 1rem;
+}
+
+.toc nav li {
+  margin: 0.2rem 0;
+}
+
+.toc nav a {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+
+/* --------------------------------------------------------
+   Post content typography
+   -------------------------------------------------------- */
+.post-content {
+  margin-top: 0.25rem;
+}
+
+.post-content p {
+  margin: 1.4rem 0;
+}
+
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+  font-weight: bold;
+  line-height: 1.35;
+  margin: 2.25rem 0 0.6rem;
+  color: var(--text);
+}
+
+.post-content h2 { font-size: 1.2rem; }
+.post-content h3 { font-size: 1.05rem; }
+.post-content h4 { font-size: 1rem; }
+
+.post-content ul,
+.post-content ol {
+  margin: 1.1rem 0;
+  padding-left: 1.5rem;
+}
+
+.post-content li {
+  margin: 0.3rem 0;
+}
+
+.post-content blockquote {
+  border-left: 2px solid var(--border);
+  padding-left: 1rem;
+  color: var(--text-muted);
+  margin: 1.5rem 0;
+  font-style: italic;
+}
+
+.post-content hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0;
+}
+
+.post-content strong { font-weight: bold; }
+.post-content em    { font-style: italic; }
+
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+}
+
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 1.5rem 0;
+}
+
+.post-content th,
+.post-content td {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-content th {
+  color: var(--text-muted);
+  font-weight: bold;
+}
+
+/* --------------------------------------------------------
+   Code
+   -------------------------------------------------------- */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  background: var(--bg-raised);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+
+pre {
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  line-height: 1.6;
+  overflow-x: auto;
+  margin: 1.75rem 0;
+  border-radius: 4px;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-raised) !important;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  font-size: 1em;
+}
+
+/* Chroma wrapper — no extra margin when it wraps the pre */
+.highlight {
+  margin: 1.75rem 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.highlight pre {
+  margin: 0;
+  border-radius: 0;
+}
+
+/* --------------------------------------------------------
+   Tags index page (/tags)
+   -------------------------------------------------------- */
+.tag-list {
+  list-style: none;
+}
+
+.tag-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.35rem 0;
+}
+
+.tag-item {
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+
+/* --------------------------------------------------------
+   Homepage — ASCII art
+   -------------------------------------------------------- */
+.home-ascii {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  line-height: 1.25;
+  color: var(--text);
+  background: none !important;
+  padding: 0;
+  border-radius: 0;
+  margin: 0.5rem 0 2rem;
+  overflow-x: auto;
+  white-space: pre;
+  user-select: none;
+}
+
+/* --------------------------------------------------------
+   Homepage — quote
+   -------------------------------------------------------- */
+.home-quote {
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin: 0 0 2.5rem;
+  white-space: pre-line;
+}
+
+/* --------------------------------------------------------
+   Homepage — tag filter row
+   -------------------------------------------------------- */
+.tag-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.tag-filter {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  padding: 0.1rem 0.35rem;
+}
+
+
+/* --------------------------------------------------------
+   Responsive
+   -------------------------------------------------------- */
+@media (max-width: 600px) {
+  html {
+    font-size: 17px;
+  }
+
+  body {
+    padding: 0 1.25rem;
+  }
+
+  header {
+    padding-top: 2rem;
+  }
+
+  .post-entry-main {
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .post-entry-img {
+    width: 64px;
+    height: 48px;
+  }
+
+  .post-header h1 {
+    font-size: 1.3rem;
+  }
+}
