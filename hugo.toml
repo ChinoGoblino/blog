@@ -4,7 +4,7 @@ title = "Ethonium"
 # Base URL — set to your domain before deploying
 baseURL = "https://ethonium.com/"
 
-languageCode = "en-us"
+locale = "en-US"
 
 # Tags only — categories disabled
 [taxonomies]
