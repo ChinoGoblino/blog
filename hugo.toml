@@ -31,6 +31,10 @@ I am fond of pigs. Dogs look up at us. Cats look down on us. Pigs treat us as eq
     endLevel = 4
     ordered = false
 
+[caches]
+  [caches.images]
+    dir = ":cacheDir/images"
+
 [outputs]
   home = ["HTML", "RSS"]
   section = ["HTML", "RSS"]
