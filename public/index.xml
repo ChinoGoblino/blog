@@ -6,21 +6,21 @@
     <description>Recent content on Ethonium</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 12 May 2026 22:56:17 +1000</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2026 15:12:07 +1000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homelab</title>
+      <link>http://localhost:1313/homelab/</link>
+      <pubDate>Tue, 19 May 2026 15:12:07 +1000</pubDate>
+      <guid>http://localhost:1313/homelab/</guid>
+      <description>&lt;p&gt;This page outlines the system I run at home for my homelab. I don&amp;rsquo;t quite feel comfortable making the repository public as, although I don&amp;rsquo;t have any secrets committed, there are occasional snippets of personally identifiable information such as location variables. Security through obscurity 👍. The format of this page is inspired by &lt;a href=&#34;https://shanedowling.com/homelab/&#34;&gt;Shane Dowling&amp;rsquo;s Homelab page&lt;/a&gt;, which I will likewise keep updated to reflect any continual changes I make. The repository exists as a private GitHub repository, but also as a Forgejo mirror on my own infrastructure.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>An Introduction to Organic Chemistry</title>
       <link>http://localhost:1313/posts/intro-to-organics/</link>
       <pubDate>Tue, 12 May 2026 22:56:17 +1000</pubDate>
       <guid>http://localhost:1313/posts/intro-to-organics/</guid>
       <description></description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;p&gt;This is a placeholder. Write something about yourself here.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;I write about things that interest me. This blog is a place to think out loud and keep notes I might want to find later.&lt;/p&gt;&#xA;&lt;p&gt;Feel free to &lt;a href=&#34;#&#34;&gt;get in touch&lt;/a&gt; — replace this with your actual contact link.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

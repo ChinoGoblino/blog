@@ -2,5 +2,6 @@
   <p>
     &copy; {{ now.Year }} {{ .Site.Params.author | default .Site.Title }}
     {{ with .Site.Home.OutputFormats.Get "RSS" }}&middot; <a href="{{ .Permalink }}">RSS</a>{{ end }}
+    &middot; Built with <a href="https://gohugo.io/">Hugo</a>
   </p>
 </footer>

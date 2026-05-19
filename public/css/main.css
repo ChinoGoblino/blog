@@ -136,7 +136,16 @@ header nav {
    Main
    -------------------------------------------------------- */
 main {
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
+}
+
+.last-updated {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  opacity: 0.7;
 }
 
 /* --------------------------------------------------------
@@ -209,12 +218,17 @@ footer a {
    Page header (tags index, about, search)
    -------------------------------------------------------- */
 .page-header {
-  margin-bottom: 2rem;
+  margin-bottom: 0;
+}
+
+.single-page .post-content > p:first-child {
+  margin-top: 0;
 }
 
 .page-header h1 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: bold;
+  line-height: 1.35;
   color: var(--text);
 }
 
@@ -298,6 +312,39 @@ footer a {
    -------------------------------------------------------- */
 .post-content {
   margin-top: 0.25rem;
+}
+
+details {
+  margin: 0.4rem 0;
+}
+
+summary {
+  cursor: pointer;
+  list-style: revert;
+}
+
+summary::marker {
+  color: var(--text-muted);
+}
+
+.details-content {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0 0.4rem 1rem;
+  border-left: 2px solid var(--link);
+}
+
+.details-content p {
+  margin: 0.4rem 0;
+}
+
+.details-content ul {
+  margin: 0.4rem 0 0 0;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.details-content li {
+  margin: 0.35rem 0;
 }
 
 .post-content p {
