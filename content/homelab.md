@@ -32,7 +32,7 @@ The main k3s node, built from my old server's hardware.
 {{% /details %}}
 
 {{% details "**UPS**" %}}
-In the mail.
+A Cyberpower OLS1000ERT2Ua mounted at the bottom of the rack, connected via USB to the main k3s node. NUT and a NUT prometheus exporter were set up via Ansible to handle a graceful shutdown on power loss and also feeding data to the monitoring stack as mentioned later in the blog.
 {{% /details %}}
 
 --- 
