@@ -1,6 +1,6 @@
 ---
 title: "Homelab"
-date: 2026-05-19T15:12:07+10:00
+date: 2026-05-25T15:12:07+10:00
 draft: false
 ---
 This page outlines the system I run at home for my homelab. I don't quite feel comfortable making the repository public as, although I don't have any secrets committed, there are occasional snippets of personally identifiable information such as location variables. Security through obscurity 👍. The format of this page is inspired by [Shane Dowling's Homelab page](https://shanedowling.com/homelab/), which I will likewise keep updated to reflect any continual changes I make. The repository exists as a private GitHub repository, but also as a Forgejo mirror on my own infrastructure.
